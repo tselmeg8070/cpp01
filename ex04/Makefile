@@ -1,7 +1,7 @@
 NAME = sed
 CC = g++
 FLAGS = -Wall -Wextra -Werror
-VFLAGS = -std=c++98 -fsanitize=address
+VFLAGS = -std=c++98
 FILES = main
 
 SRCS = $(addsuffix .cpp, $(FILES))

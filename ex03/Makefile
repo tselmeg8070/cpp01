@@ -1,7 +1,7 @@
 NAME = Moar
 CC = g++
 FLAGS = -Wall -Wextra -Werror
-VFLAGS = -std=c++98 -fsanitize=address
+VFLAGS = -std=c++98
 FILES = Weapon \
 		HumanA \
 		HumanB \

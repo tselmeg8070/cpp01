@@ -44,23 +44,31 @@ int	main(int argc, char **argv)
 			fileContent = fileContent.substr(0, fileContent.size() - 1);
 			std::string from = argv[2];
 			std::string to = argv[3];
-			std::cout << fileContent;
 			replaceString(fileContent, from, to);
 			myFile.close();
 			std::string outName = argv[1];
 			outName += ".replace";
-			resFile.open(outName);
+			resFile.open(outName.c_str());
 			if (resFile.is_open())
 			{
 				resFile << fileContent;
 				resFile.close();
 			}
 			else
+			{
 				std::cerr << "Couldn't create the file" << std::endl;
+				return (1);
+			}
 		}
 		else
+		{
 			std::cerr << "Couldn't open the file" << std::endl;
+			return (1);
+		}
 	}
 	else
+	{
 		std::cerr << "Arguments seems strange" << std::endl;
+		return (1);
+	}
 }

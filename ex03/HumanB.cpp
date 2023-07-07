@@ -3,12 +3,12 @@
 HumanB::HumanB(std::string vName)
 {
 	name = vName;
-	weapon = nullptr;
+	weapon = NULL;
 }
 
 void	HumanB::attack(void)
 {
-	if (weapon == nullptr)
+	if (!weapon)
 		std::cout << name << " punching with bare hands"
 			<< std::endl;
 	else
